@@ -19,4 +19,11 @@
           "module": "CommonJS"
         }
     },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/**/*.ts",
+      "**/**/*.tsx"
+    ],
 }
