@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const fileMock = () => {
-    return <div />
-}
+const fileMock = () => <div />;
 
 export default fileMock;

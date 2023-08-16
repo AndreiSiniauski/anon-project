@@ -1,23 +1,25 @@
 import { Button } from 'shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // Тестовый компонент для генерации ошибок
 export const BugButton = () => {
     const [error, setError] = useState(false);
+    const { t } = useTranslation();
 
     const onThrow = () => {
-        setError(true)
-    }
+        setError(true);
+    };
 
     useEffect(() => {
-        if(error) {
-            throw new Error
+        if (error) {
+            throw new Error();
         }
-    }, [error])
+    }, [error]);
 
     return (
         <Button onClick={onThrow}>
-            throw Error
+            {t('Выбросить ошибку')}
         </Button>
-    )
-}
+    );
+};

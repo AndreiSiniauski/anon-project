@@ -1,10 +1,10 @@
-import { fireEvent, screen } from "@testing-library/react";
-import { renderWithTranslation } from "shared/lib/renderWithTranslation/renderWithTranslation";
-import { SideBar } from "widgets/SideBar/ui/SideBar/SideBar";
+import { fireEvent, screen } from '@testing-library/react';
+import { renderWithTranslation } from 'shared/lib/renderWithTranslation/renderWithTranslation';
+import { SideBar } from 'widgets/SideBar/ui/SideBar/SideBar';
 
 describe('SideBar', () => {
     test('with', () => {
-        renderWithTranslation(<SideBar />)
+        renderWithTranslation(<SideBar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
@@ -15,4 +15,4 @@ describe('SideBar', () => {
         fireEvent.click(toggleBtn);
         expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
     });
-})
+});
